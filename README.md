@@ -71,9 +71,30 @@ let myFavoritePolygon = Shape.square(side: 4)
 print(myFavoritePolygon.lengthOf())
 ```
 
-## Question 3
+## Question 3 √
 
 Write an enum called `OperatingSystem` and give it cases for `windows`, `mac`, and `linux`. Create an array of 10 `OperatingSystem` objects where each one is set to a random operating system. Then, iterate through the array and print out a message depending on the operating system.
+
+```swift
+enum OperatingSystem {
+    case windows
+    case mac
+    case linux
+}
+
+let randomOS = [OperatingSystem.mac, OperatingSystem.windows, OperatingSystem.linux, OperatingSystem.mac, OperatingSystem.windows, OperatingSystem.linux, OperatingSystem.mac, OperatingSystem.windows, OperatingSystem.linux, OperatingSystem.mac]
+
+for OS in randomOS {
+    switch OS {
+    case .mac:
+        print("this is a mac")
+    case .windows:
+        print("this is a pc")
+    case .linux:
+        print("this is a linux")
+    }
+}
+```
 
 
 ## Question 4
