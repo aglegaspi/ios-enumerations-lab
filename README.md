@@ -97,7 +97,7 @@ for OS in randomOS {
 ```
 
 
-## Question 4
+## Question 4 √
 
 You are working on a game in which your character is exploring a grid-like map. You get the original location of the character and the steps he will take.
 
@@ -118,7 +118,24 @@ enum Direction {
 var location = (x: 0, y: 0)
 var steps: [Direction] = [.up, .up, .left, .down, .left]
 
-// your code here
+for direction in steps {
+    print("current location x: \(location.x) y: \(location.y)")
+    print("i'm about to go \(direction)")
+    
+    switch direction {
+        
+        case .up:
+            location.y += 1
+        case .down:
+            location.y -= 1
+        case .right:
+            location.x += 1
+        case .left:
+            location.x -= 1
+    }
+}
+
+print("final location x: \(location.x) y: \(location.y)")
 ```
 
 
