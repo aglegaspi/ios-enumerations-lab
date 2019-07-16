@@ -3,11 +3,33 @@
 Fork and clone this repo. On your fork, answer and commit the follow questions. When you are finished, submit the link to your repo on Canvas.
 
 
-## Question 1
+## Question 1 √
 
 a) Define an enumeration called `iOSDeviceType` with member values `iPhone`, `iPad`, `iWatch`. Create a variable called `myDevice` and assign it one member value.
 
 b) Adjust your code above so that `iPhone` and `iPad` have associated values of type String which represents the model number, eg: `iPhone("6 Plus")`. Use a switch case and let syntax to print out the model number of each device.
+
+```swift
+enum iOSDeviceType: String {
+    case iPhone = "6 Plus"
+    case iPad = "11in Pro"
+    case iWatch = "Series 4"
+}
+
+let devices = iOSDeviceType.init(rawValue: "Series 4")
+var myDevice = String()
+
+switch devices! {
+case .iPhone:
+    myDevice = devices!.rawValue
+case .iPad:
+    myDevice = devices!.rawValue
+case .iWatch:
+    myDevice = devices!.rawValue
+}
+
+print("\(myDevice)")
+```
 
 
 ## Question 2
