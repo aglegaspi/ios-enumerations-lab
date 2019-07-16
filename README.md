@@ -40,6 +40,36 @@ b) Write a method inside `Shape` that returns how many sides the shape has. Crea
 
 c) Re-write `Shape` so that each case has an associated value of type Int that will represent the length of the sides (assume the shapes are regular polygons so all the sides are the same length) and write a method inside that returns the perimeter of the shape.
 
+```swift
+enum Shape {
+        
+        case triangle
+        case rectangle
+        case square(side: Double)
+        case pentagon
+        case hexagon
+        
+        func lengthOf() -> Double {
+            
+            switch self {
+            //case .triangle:
+                    //(height * width) / 2
+            //case .rectangle:
+                    //(height * width) * 2
+            case .square(side: let side):
+                    return side * 3
+            //case .pentagon:
+            default:
+                return 0.00
+            }
+            
+        }
+        
+    }
+
+let myFavoritePolygon = Shape.square(side: 4)
+print(myFavoritePolygon.lengthOf())
+```
 
 ## Question 3
 
